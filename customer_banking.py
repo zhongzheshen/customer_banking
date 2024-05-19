@@ -12,7 +12,7 @@ def main():
     # ADD YOUR CODE HERE
     savings_balance = float(input("Enter your savings account balance: "))
     savings_interest = float(input("Enter your savings account interest rate: "))
-    savings_maturity = int(input("Enter your savings account maturity: "))
+    savings_maturity = int(input("Enter your savings account maturity: "))  # wrong by is using float 
     # Call the create_savings_account function and pass the variables from the user.
     updated_savings_balance, interest_earned = create_savings_account(savings_balance, savings_interest, savings_maturity)
 

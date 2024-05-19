@@ -26,7 +26,8 @@ def create_cd_account(balance, interest_rate, months):
     for i in range(months):
         final_rate *=  (1 + interest_rate)
         
-    interest_earned = balance * (final_rate - 1)
+    # interest_earned = balance * (final_rate - 1)   # wrong on by ls
+    interest_earned = balance * final_rate
     # Update the CD account balance by adding the interest earned
     # ADD YOUR CODE HERE
     updated_balance = float(balance + interest_earned)
