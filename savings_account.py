@@ -27,10 +27,11 @@ def create_savings_account(balance, interest_rate, months):
     interest_earned = float(0)
     
     for i in range(months):
-        final_rate *=  (1 + interest_rate)
-        
-    # interest_earned = balance * (final_rate - 1)   # wrong by ls
-    interest_earned = balance * final_rate
+    ###    final_rate *= (1 + interest_rate)    # wrong by ls
+        final_rate = (1 + interest_rate) ** i
+
+    interest_earned = balance * (final_rate - 1)  
+    # interest_earned = balance * final_rate
     # Update the savings account balance by adding the interest earned
     # ADD YOUR CODE HERE
     updated_balance = float(balance + interest_earned)
